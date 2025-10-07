@@ -1,0 +1,407 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    min-height: 100vh;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /* obligatoire pour Flexbox */
+    background: rgba(233, 233, 245, 0.425);
+}
+
+section {
+    flex: 1;
+    /* occupe tout l'espace restant */
+    padding-top: 120px;
+    /* pour éviter que le contenu soit caché par le header */
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+    padding: 0 10%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(185, 175, 219, 0.363);
+
+}
+
+.moi {
+
+    font-size: 1.5rem;
+}
+
+.moi span {
+    margin: 15px;
+    margin-top: 30px;
+    font-size: 1.8rem;
+    color: rgb(231, 23, 231);
+    font-weight: bold;
+
+}
+
+
+.nav-bar {
+    display: flex;
+}
+
+.nav-bar li {
+    margin: 0 15px;
+    list-style: none;
+    font-size: 1.3rem;
+}
+
+.nav-bar li a {
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+    position: relative;
+}
+
+.nav-bar li a::before,
+.nav-bar li a::after {
+    content: "";
+    height: 2px;
+    border-radius: 6px;
+    position: absolute;
+    transition: 0.5s;
+}
+
+.nav-bar li a::before {
+    top: -5px;
+    left: 0;
+    width: 0;
+    background-color: rgba(238, 98, 238, 0.74);
+}
+
+.nav-bar li a:hover::before {
+    width: 100%;
+}
+
+.nav-bar li a::after {
+    bottom: -5px;
+    right: 0;
+    width: 0;
+    background-color: white;
+}
+
+.nav-bar li a:hover::after {
+    width: 100%;
+}
+
+
+/* Section formulaire */
+.formulaire {
+    display: flex;
+    justify-content: center;
+    /* centre horizontalement le contenu */
+    align-items: center;
+    /* centre verticalement */
+    /* min-height: calc(100vh - 100px); */
+    /* prend toute la hauteur disponible (header 100px) */
+    padding: 20px;
+    background: rgba(233, 233, 245, 0.425);
+}
+
+.renseignement {
+    margin-top: 30px;
+    display: flex;
+    gap: 50px;
+    /* espace entre contact-gauche et formulaire */
+    flex-wrap: wrap;
+    /* pour que ça s’adapte sur mobile */
+    max-width: 1000px;
+    /* largeur maximale */
+    width: 100%;
+    background: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.contact-gauche {
+    flex: 1;
+    /* prend moitié de l’espace */
+    min-width: 250px;
+}
+
+.contact-gauche h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.contact-gauche p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.formulaire {
+    display: flex;
+    flex-direction: column;
+
+}
+
+#reservation {
+    flex: 1;
+    /* prend moitié de l’espace */
+    min-width: 250px;
+}
+
+#reservation h2.title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 22px;
+    color: #333;
+}
+
+/* Formulaire */
+#reservation form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#reservation form input,
+#reservation form textarea {
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    width: 100%;
+    resize: none;
+}
+
+#reservation form textarea {
+    height: 120px;
+}
+
+#reservation form button {
+    padding: 12px;
+    font-size: 16px;
+    background-color: #b9afdb;
+    color: black;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#reservation form button:hover {
+    background-color: #a594d4;
+}
+
+.formulaire {
+    padding: 20px;
+}
+
+.renseignement {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.contact-gauche,
+#reservation {
+    flex: 1;
+}
+
+#reservation form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#reservation input,
+#reservation textarea,
+#reservation button {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+
+/* Footer */
+footer {
+    background: #bebcbc63;
+    color: black;
+    text-align: center;
+    padding: 30px 10%;
+    margin-top: auto;
+    /* pousse le footer en bas si la page est courte */
+    font-family: Arial, sans-serif;
+}
+
+footer .information {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+footer .contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px 0;
+}
+
+footer .contact h2 {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+footer .contact p {
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+footer .contact a img {
+    width: 32px;
+    height: 32px;
+    transition: transform 0.3s;
+}
+
+footer .contact a img:hover {
+    transform: scale(1.2);
+}
+
+.footer-text {
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.footer-text span {
+    color: burlywood;
+}
+
+
+
+
+/* Responsive */
+@media (max-width:964px) {
+    header .nav-bar {
+        display: none;
+    }
+
+    header {
+        padding: 0 20px;
+    }
+
+    header .moi {
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    header .moi span {
+        font-size: 23px;
+    }
+
+    .toggle_menu {
+        display: flex;
+        margin-right: 40px;
+        height: 40px;
+        width: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        cursor: pointer;
+    }
+
+    .toggle_menu::before {
+        position: absolute;
+        content: "";
+        height: 3px;
+        width: 28px;
+        background-color: green;
+        border-radius: 6px;
+        box-shadow: 0 10px 0 green;
+        transform: translateY(-10px);
+        transition: 0.5s;
+    }
+
+    .toggle_menu.active::before {
+        transform: translateY(0) rotate(135deg);
+        box-shadow: 0 0 0 green;
+    }
+
+    .toggle_menu::after {
+        position: absolute;
+        content: "";
+        height: 3px;
+        width: 28px;
+        background-color: green;
+        border-radius: 6px;
+        transform: translateY(10px);
+        transition: 0.5s;
+    }
+
+    .toggle_menu.active::after {
+        transform: translateY(0) rotate(-135deg);
+        box-shadow: 0 0 0 green;
+    }
+
+    header .nav-bar.responsive {
+        display: flex;
+        position: absolute;
+        top: 50px;
+        right: 0;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: white;
+        box-shadow: 0 0 10px black;
+        flex-direction: row;
+
+    }
+
+    header .nav-bar.responsive li {
+        margin: 15px 10px;
+    }
+
+    header .moi {
+        display: flex;
+        flex-direction: column;
+        font-size: 20px;
+    }
+
+
+    /* header .moi span {
+        font-size: 20px;
+    } */
+
+
+    .formulaire h2 {
+        font-size: 15px;
+    }
+
+
+    footer {
+        margin-top: 30px;
+    }
+
+    footer .information {
+        flex-direction: column;
+        height: auto;
+
+
+    }
+}

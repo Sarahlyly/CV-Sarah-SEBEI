@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style-cv.css">
+    <title>CV Sarah SEBEI</title>
+</head>
+
+<body>
+    <header>
+        <div class="moi">
+            <span>Sarah SEBEI</span> Développeuse Web
+        </div>
+
+        <ul class="nav-bar">
+            <li><a href="#">A propos</a></li>
+            <li><a href="./assets/img/CV_Sarah_SEBEI_Dev.pdf" target="_blank">CV</a></li>
+            <li><a href="./projet.html">Projets</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+        </ul>
+
+        <!-- Menu responsive -->
+        <div class="toggle_menu"></div>
+
+
+    </header>
+
+    <!-- Section A propos ---------------------------------------->
+    <section id="a-propos">
+
+        <div class="gauche">
+            <img src="./assets/img/moi2.jpg" alt="Moi">
+        </div>
+
+        <div class="droite"><br>
+            <h2>A PROPOS DE MOI</h2>
+            <p> Bonjour, je m'appelle Sarah SEBEI. Aprés 15 ans d'expérience en comptabilité, je me reconvertis avec
+                passion dans le développement web, un domaine que j’ai exploré en autodidacte.
+                De nature créative, j'ai découvert que je pouvais utiliser mon potentiel créatif à meilleur escient
+                et voir concrètement le résultat de ce que je
+                pouvais créer. Cette reconversion est motivée par un désir profond d'explorer de nouveaux défis et
+                horizons.
+                Je suis convaincue que ma passion pour le développement web, ma détermination ainsi que mes compétences
+                que
+                j'ai déjà acquis tout au long de mon parcours professionnel me permettront de réussir dans cette
+                reconversion
+                professionnelle. Mon objectif : relever des défis techniques et continuer à développer mes
+                compétences.
+            </p><br>
+            <ul class="cercles">
+
+                <li><a href="./assets/img/CV_Sarah_SEBEI_Dev.pdf" target="_blank">CV</a></li>
+                <li><a href="./projet.html">Projets</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+            </ul>
+
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+
+    <footer>
+        <div class="information">
+
+            <div class="contact">
+                <h2>Téléphone</h2>
+                <p>06.13.42.56.72</p>
+            </div>
+
+            <div class="contact">
+                <h2>Email</h2>
+                <p>Sarahsebei@gmail.com</p>
+            </div>
+            <div class="contact">
+                <h2>Suivez-moi</h2>
+
+                <a href="https://www.linkedin.com/feed/?trk=guest_homepage-basic_nav-header-signin">
+                    <img src="./assets/img/logo-linked.jpg" alt="Mon linkedin"></a>
+
+            </div>
+
+        </div>
+
+        </div>
+        <p class="footer-text">Réalisé par <span>Sarah Seb</span> | Tous les droits sont réservés.</p>
+
+    </footer>
+
+    <script>
+        var small_menu = document.querySelector('.toggle_menu')
+        var menu = document.querySelector('.nav-bar')
+
+        small_menu.onclick = function () {
+            small_menu.classList.toggle('active');
+            menu.classList.toggle('responsive');
+        }
+
+    </script>
+
+
+</body>
+
+</html>

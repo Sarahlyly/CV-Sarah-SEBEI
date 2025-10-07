@@ -1,0 +1,109 @@
+
+
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: url(./assets/img/2147878037.jpg) center/cover;
+}
+h1{
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 3px;
+    font-size: 2.5rem;
+    text-shadow: 3px 3px 8px #0000006b
+}
+main {
+    min-height: 800px;
+    width: 90%;
+    background: rgba(224, 181, 224, 0.42);
+    margin: 0 auto;
+    border: 2px solid palevioletred;
+    border-radius: 20px;
+    box-shadow: -8px -6px 19px 0px plum;
+    padding: 15px;
+
+}
+
+h2{
+    margin: 0;
+}
+.flexbox, .grid {
+    border: 3px solid purple;
+    border-radius: 10px;
+    padding: 6px;
+    margin-top: 20px;
+}
+
+/* FLEXBOX
+Sert à répartir équitablement des éléments sur la page.
+justify-content :space-around 
+align-items:center */
+.flexbox ul{
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+
+.flexbox li {
+    list-style: none;
+    height: 160px;
+    width: 160px;
+    margin: 10px;
+    background: violet;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*GRID */
+
+.grid-container {
+    display: grid;
+    grid-template-columns:30% 70%;
+
+}
+
+.grid img {
+    width: 80%;
+    margin: 20px auto;
+    display: block;
+}
+
+form{
+    display: grid;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas:
+    "titre1 titre2 titre3"
+    "titre4 titre4 titre5"
+    ". . titre6";
+    border: 3px solid black;
+    gap: 10px;
+    justify-items: center;
+}
+.titre1 {grid-area: titre1;}
+.titre2 {grid-area: titre2;}
+.titre3 {grid-area: titre3;}
+.titre4 {grid-area: titre4;}
+.titre5 {grid-area: titre5;}
+.titre6 {grid-area: titre6;}
+
+/* Responsive
+La hauteur maximal ces réglages sont pris en compte
+Celà veut dire quand je suis en dessous de 900px tu me 
+mais ceci:  */
+@media screen and (max-width:900px) {
+    body {
+    background: blue;
+    }
+.grid-container{
+    display: block;
+}
+.grid-container img {
+    width: 40%;
+}
+}

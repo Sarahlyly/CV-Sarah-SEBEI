@@ -1,0 +1,389 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
+  padding: 0 10%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(185, 175, 219, 0.363);
+  /* box-shadow: 0 10 10px black; */
+
+}
+
+
+
+.nav-bar {
+  display: flex;
+}
+
+
+.nav-bar li {
+  margin: 0 15px;
+  list-style: none;
+  font-size: 1.3rem;
+}
+
+.nav-bar li a {
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: 0;
+  color: black;
+  position: relative;
+}
+
+
+
+.nav-bar li a::before {
+  position: absolute;
+  top: -5px;
+  left: 0;
+  content: "";
+  width: 0;
+  height: 2px;
+  border-radius: 6px;
+  background-color: rgba(238, 98, 238, 0.74);
+  transition: 0.5s;
+}
+
+.nav-bar li a:hover::before {
+  width: 100%;
+}
+
+.nav-bar li a::after {
+  position: absolute;
+  bottom: -5px;
+  right: 0;
+  content: "";
+  width: 0;
+  height: 2px;
+  border-radius: 6px;
+  background-color: white;
+  transition: 0.5s;
+}
+
+.nav-bar li a:hover::after {
+  width: 100%;
+}
+
+
+
+body {
+  background: rgba(233, 233, 245, 0.425);
+
+}
+
+/* ------------------------------------------------------------------------------- */
+
+/* Partie main A propos */
+
+#a-propos {
+
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  margin-left: 10%;
+  margin-right: 10%;
+  height: calc(100vh - 50px);
+  justify-content: space-between;
+
+}
+
+/* Partie gauche photo et titre */
+
+.moi {
+
+  font-size: 1.5rem;
+
+}
+
+.moi span {
+  margin: 15px;
+  margin-top: 30px;
+  font-size: 1.8rem;
+  color: rgb(231, 23, 231);
+  font-weight: bold;
+
+}
+
+/* Partie droite: Présentation */
+
+#a-propos .gauche {
+
+  display: flex;
+  align-items: flex-start;
+  gap: 100px;
+
+
+}
+
+.droite h2 {
+  margin-top: 20px;
+  margin: 30px auto;
+  padding: 0;
+
+}
+
+.gauche img {
+  /* margin-right: 70px; */
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.droite {
+  font-size: 1.3rem;
+  text-align: justify;
+  max-width: 700px;
+  /* limite la largeur du texte */
+}
+
+.cercles {
+  display: flex;
+
+}
+
+/* le cercle devient le lien */
+
+.cercles li {
+  list-style: none;
+  margin: 15px;
+}
+
+.cercles li a {
+  font-size: large;
+  width: 100px;
+  height: 100px;
+  border: 2px solid #333;
+  border-radius: 50%;
+  background: rgb(199, 199, 226);
+  color: black;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  transition: all 0.3s ease;
+  /* petite animation */
+}
+
+/* effet au survol */
+.cercles li a:hover {
+  background: purple;
+  color: white;
+}
+
+
+/* Footer */
+footer {
+  background: #bebcbc63;
+  color: black;
+  text-align: center;
+  padding: 30px 10%;
+  margin-top: auto;
+  /* pousse le footer en bas si la page est courte */
+  font-family: Arial, sans-serif;
+}
+
+footer .information {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+footer .contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px 0;
+}
+
+footer .contact h2 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+footer .contact p {
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+footer .contact a img {
+  width: 32px;
+  height: 32px;
+  transition: transform 0.3s;
+}
+
+footer .contact a img:hover {
+  transform: scale(1.2);
+}
+
+.footer-text {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.footer-text span {
+  color: rgb(219, 96, 209);
+}
+
+/* Responsive */
+@media (max-width:964px) {
+  header .nav-bar {
+    display: none;
+  }
+
+  header {
+    padding: 0 20px;
+  }
+
+  header .moi {
+    display: flex;
+    flex-direction: column;
+  }
+
+
+  header .moi span {
+    font-size: 23px;
+  }
+
+  .toggle_menu {
+    display: flex;
+    margin-right: 40px;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .toggle_menu::before {
+    position: absolute;
+    content: "";
+    height: 3px;
+    width: 28px;
+    background-color: green;
+    border-radius: 6px;
+    box-shadow: 0 10px 0 green;
+    transform: translateY(-10px);
+    transition: 0.5s;
+  }
+
+  .toggle_menu.active::before {
+    transform: translateY(0) rotate(135deg);
+    box-shadow: 0 0 0 green;
+  }
+
+  .toggle_menu::after {
+    position: absolute;
+    content: "";
+    height: 3px;
+    width: 28px;
+    background-color: green;
+    border-radius: 6px;
+    transform: translateY(10px);
+    transition: 0.5s;
+  }
+
+  .toggle_menu.active::after {
+    transform: translateY(0) rotate(-135deg);
+    box-shadow: 0 0 0 green;
+  }
+
+  header .nav-bar.responsive {
+    display: flex;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    box-shadow: 0 0 10px black;
+    flex-direction: row;
+
+  }
+
+  header .nav-bar.responsive li {
+    margin: 15px 10px;
+  }
+
+
+  #a-propos {
+    flex-direction: column;
+    /* padding: 12px; */
+    height: fit-content;
+    align-content: center;
+
+  }
+
+  #a-propos .gauche,
+  #a-propos .droite {
+    width: 100%;
+    padding: 0;
+  }
+
+  #a-propos .gauche {
+    margin-top: 40px;
+
+  }
+
+  #a-propos .droite p {
+    font-size: 17px;
+    text-align: justify;
+
+  }
+
+  #a-propos .droite h2 {
+    font-size: 20px;
+
+  }
+
+
+  #a-propos .gauche img {
+    margin: 20px 0;
+    height: 300px;
+    width: 300px;
+
+  }
+
+  #a-propos .droite h2 {
+    margin: 10px 0;
+  }
+
+
+  .cercles li a {
+    font-size: small;
+    width: 70px;
+    height: 70px;
+
+  }
+
+
+  footer {
+    margin-top: 30px;
+  }
+
+  footer .information {
+    flex-direction: column;
+    height: auto;
+
+
+  }
+
+
+}

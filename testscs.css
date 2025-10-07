@@ -1,0 +1,203 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+    padding: 0 10%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(185, 175, 219, 0.363);
+    /* box-shadow: 0 10 10px black; */
+
+}
+
+
+.nav-bar {
+    display: flex;
+
+}
+
+
+.nav-bar li {
+    margin: 0 15px;
+    list-style: none;
+    font-size: 1.3rem;
+}
+
+.nav-bar li a {
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: 0;
+    color: black;
+    position: relative;
+}
+
+
+.nav-bar li a::before {
+    position: absolute;
+    top: -5px;
+    left: 0;
+    content: "";
+    width: 0;
+    height: 2px;
+    border-radius: 6px;
+    background-color: rgba(238, 98, 238, 0.74);
+    transition: 0.5s;
+}
+
+.nav-bar li a:hover::before {
+    width: 100%;
+}
+
+.nav-bar li a::after {
+    position: absolute;
+    bottom: -5px;
+    right: 0;
+    content: "";
+    width: 0;
+    height: 2px;
+    border-radius: 6px;
+    background-color: brown;
+    transition: 0.5s;
+}
+
+.nav-bar li a:hover::after {
+    width: 100%;
+}
+
+
+
+body {
+    background: rgba(233, 233, 245, 0.425);
+
+}
+
+
+/* Section Partie gauche CV */
+
+.container {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    font-size: 1.3rem;
+}
+
+.container hr {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    border: 1px solid black;
+    box-shadow: 6px -2px 7px 6px rgb(199, 199, 226);
+}
+
+.colonne-gauche {
+    width: 900px;
+    height: 1600px;
+    background: rgba(171, 206, 206, 0.705);
+}
+
+.colonne-gauche .photo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.colonne-gauche img {
+    margin-top: 30px;
+    margin-left: 40px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.colonne-gauche .nom {
+    margin-top: 10px;
+    margin-bottom: 16px;
+}
+
+.colonne-gauche .metier {
+    font-size: 26px;
+}
+
+.colonne-gauche .poste {
+    font-size: 26px;
+    color: rgb(129, 129, 240);
+}
+
+.colonne-gauche h1 {
+    margin-top: 65px;
+    margin-left: 40px;
+    padding: 0;
+
+}
+
+.colonne-droite h1 {
+    margin-top: 65px;
+    margin-left: 20px;
+    padding: 0;
+}
+
+.colonne-gauche p {
+    margin-top: 15px;
+    margin-left: 40px;
+    padding: 0;
+}
+
+.colonne-droite h3 {
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.colonne-droite ul {
+    margin-top: 15px;
+    margin-left: 70px;
+}
+
+.colonne-droite .experiences {
+
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-between; */
+
+}
+
+.colonne-droite .poste {
+    margin-left: 70px;
+}
+
+.colonne-droite .poste span {
+    color: blue;
+}
+
+
+
+.contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.contact p {
+    color: rgba(0, 0, 0, 0.795)
+}
+
+.contact h2 {
+    font-size: 20px;
+    margin: 0 0 10px 0;
+    text-align: center;
+
+}

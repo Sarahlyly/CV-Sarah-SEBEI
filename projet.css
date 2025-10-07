@@ -1,0 +1,168 @@
+/* RESET DE BASE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+    padding: 0 10%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(185, 175, 219, 0.363);
+    /* box-shadow: 0 10 10px black; */
+
+}
+
+h3 span {
+    color: rgb(231, 23, 231);
+}
+
+
+.nav-bar {
+    display: flex;
+}
+
+
+.nav-bar li {
+    margin: 0 15px;
+    list-style: none;
+    font-size: 1.3rem;
+}
+
+.nav-bar li a {
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: 0;
+    color: black;
+    position: relative;
+}
+
+
+
+.nav-bar li a::before {
+    position: absolute;
+    top: -5px;
+    left: 0;
+    content: "";
+    width: 0;
+    height: 2px;
+    border-radius: 6px;
+    background-color: rgba(238, 98, 238, 0.74);
+    transition: 0.5s;
+}
+
+.nav-bar li a:hover::before {
+    width: 100%;
+}
+
+.nav-bar li a::after {
+    position: absolute;
+    bottom: -5px;
+    right: 0;
+    content: "";
+    width: 0;
+    height: 2px;
+    border-radius: 6px;
+    background-color: white;
+    transition: 0.5s;
+}
+
+.nav-bar li a:hover::after {
+    width: 100%;
+}
+
+.moi {
+
+    font-size: 1.5rem;
+
+}
+
+.moi span {
+    margin: 15px;
+    margin-top: 30px;
+    font-size: 1.8rem;
+    color: rgb(231, 23, 231);
+    font-weight: bold;
+
+}
+
+
+body {
+    background: rgba(233, 233, 245, 0.425);
+
+}
+
+main {
+    margin-top: 150px;
+}
+
+main h1 {
+    text-align: center;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* Footer */
+footer {
+    background: #bebcbc63;
+    color: black;
+    text-align: center;
+    padding: 30px 10%;
+    margin-top: auto;
+    /* pousse le footer en bas si la page est courte */
+    font-family: Arial, sans-serif;
+}
+
+footer .information {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+footer .contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px 0;
+}
+
+footer .contact h2 {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+footer .contact p {
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+footer .contact a img {
+    width: 32px;
+    height: 32px;
+    transition: transform 0.3s;
+}
+
+footer .contact a img:hover {
+    transform: scale(1.2);
+}
+
+.footer-text {
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.footer-text span {
+    color: rgb(219, 96, 209);
+}
