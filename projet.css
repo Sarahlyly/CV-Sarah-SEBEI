@@ -112,6 +112,28 @@ main h1 {
     justify-content: space-between;
 }
 
+.centrer-lien {
+    display: block;
+    /* pour que le lien soit considéré comme un bloc */
+    text-align: center;
+    /* centre le texte à l’intérieur */
+}
+
+.media-block {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+
+.video-fixed {
+    width: 100%;
+    height: 500px;
+    /* même hauteur que ton image PNG */
+    object-fit: cover;
+    /* la vidéo remplit le cadre */
+    display: block;
+}
 
 /* Footer */
 footer {
@@ -166,3 +188,73 @@ footer .contact a img:hover {
 .footer-text span {
     color: rgb(219, 96, 209);
 }
+
+
+@media (max-width:964px) {
+    header .nav-bar {
+        display: none;
+    }
+
+    .toggle_menu {
+        display: flex;
+        margin-right: 40px;
+        height: 40px;
+        width: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        cursor: pointer;
+    }
+
+    .toggle_menu::before {
+        position: absolute;
+        content: "";
+        height: 3px;
+        width: 28px;
+        background-color: green;
+        border-radius: 6px;
+        box-shadow: 0 10px 0 green;
+        transform: translateY(-10px);
+        transition: 0.5s;
+    }
+
+    .toggle_menu.active::before {
+        transform: translateY(0) rotate(135deg);
+        box-shadow: 0 0 0 green;
+    }
+
+    .toggle_menu::after {
+        position: absolute;
+        content: "";
+        height: 3px;
+        width: 28px;
+        background-color: green;
+        border-radius: 6px;
+        transform: translateY(10px);
+        transition: 0.5s;
+    }
+
+    .toggle_menu.active::after {
+        transform: translateY(0) rotate(-135deg);
+        box-shadow: 0 0 0 green;
+    }
+
+    header .nav-bar.responsive {
+        display: flex;
+        position: absolute;
+        top: 50px;
+        right: 0;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: white;
+        box-shadow: 0 0 10px black;
+        flex-direction: row;
+
+    }
+
+    header .nav-bar.responsive li {
+        margin: 15px 10px;
+    }
