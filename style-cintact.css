@@ -17,6 +17,24 @@ body {
     background: rgba(233, 233, 245, 0.425);
 }
 
+.notification {
+    position: fixed;
+    /* reste visible même en scrollant */
+    top: 20px;
+    /* distance depuis le haut */
+    right: 20px;
+    /* distance depuis la droite */
+    background-color: #28a745;
+    /* vert comme succès */
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
 section {
     flex: 1;
     /* occupe tout l'espace restant */
