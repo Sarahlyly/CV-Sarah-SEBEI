@@ -17,23 +17,7 @@ body {
     background: rgba(233, 233, 245, 0.425);
 }
 
-.notification {
-    position: fixed;
-    /* reste visible même en scrollant */
-    top: 20px;
-    /* distance depuis le haut */
-    right: 20px;
-    /* distance depuis la droite */
-    background-color: #28a745;
-    /* vert comme succès */
-    color: white;
-    padding: 12px 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-}
+
 
 section {
     flex: 1;
@@ -125,11 +109,7 @@ header {
 .formulaire {
     display: flex;
     justify-content: center;
-    /* centre horizontalement le contenu */
     align-items: center;
-    /* centre verticalement */
-    /* min-height: calc(100vh - 100px); */
-    /* prend toute la hauteur disponible (header 100px) */
     padding: 20px;
     background: rgba(233, 233, 245, 0.425);
 }
@@ -251,6 +231,16 @@ header {
     padding: 10px;
     border-radius: 8px;
     border: 1px solid #ccc;
+}
+
+#notification {
+    background-color: #4CAF50;
+    /* Vert */
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 20px;
 }
 
 
