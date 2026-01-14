@@ -2,24 +2,25 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
 }
 
 header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 100px;
+  height: 120px;
   padding: 0 10%;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  background-color: rgba(185, 175, 219, 0.363);
+  background-color: rgb(242, 242, 237);
+
+
   /* box-shadow: 0 10 10px black; */
 
 }
-
-
 
 .nav-bar {
   display: flex;
@@ -75,15 +76,17 @@ header {
 }
 
 
-
-body {
-  background: rgba(233, 233, 245, 0.425);
-
-}
-
 /* ------------------------------------------------------------------------------- */
 
+main {
+  background: black;
+}
+
 /* Partie main A propos */
+.section-apropos {
+  background-color: black;
+  padding: 80px 0;
+}
 
 #a-propos {
 
@@ -91,7 +94,7 @@ body {
   display: flex;
   align-items: center;
   margin-left: 10%;
-  margin-right: 10%;
+  margin-right: 15%;
   height: calc(100vh - 50px);
   justify-content: space-between;
 
@@ -105,11 +108,11 @@ body {
 
 }
 
-.moi span {
+span {
   margin: 15px;
   margin-top: 30px;
   font-size: 1.8rem;
-  color: rgb(231, 23, 231);
+  color: rgb(238, 178, 178);
   font-weight: bold;
 
 }
@@ -144,6 +147,7 @@ body {
   font-size: 1.3rem;
   text-align: justify;
   max-width: 700px;
+  color: beige;
   /* limite la largeur du texte */
 }
 
@@ -163,10 +167,10 @@ body {
   font-size: large;
   width: 100px;
   height: 100px;
-  border: 2px solid #333;
+  border: 2px solid #f2e2e2;
   border-radius: 50%;
-  background: rgb(199, 199, 226);
-  color: black;
+  background: rgb(238, 178, 178);
+  color: white;
   text-decoration: none;
   display: flex;
   align-items: center;
@@ -183,15 +187,195 @@ body {
   color: white;
 }
 
+/* Section A propos */
 
-/* Footer */
+
+
+body {
+  background: black
+}
+
+
+
+main {
+  margin-top: 150px;
+}
+
+main h1 {
+  text-align: center;
+}
+
+.row {
+  display: flex;
+  justify-content: space-around;
+}
+
+
+.media-block {
+  width: 100%;
+  display: block;
+  height: 500px;
+  object-fit: cover;
+  margin: 0 auto;
+}
+
+
+
+.video-fixed {
+  width: 100%;
+  display: block;
+  height: 500px;
+  object-fit: cover;
+  margin: 0 auto;
+
+}
+
+/* Section formulaire */
+.formulaire {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background: black;
+}
+
+.renseignement {
+  margin-top: 30px;
+  display: flex;
+  gap: 50px;
+  /* espace entre contact-gauche et formulaire */
+  flex-wrap: wrap;
+  /* pour que ça s’adapte sur mobile */
+  max-width: 1000px;
+  /* largeur maximale */
+  width: 100%;
+  background: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.contact-gauche {
+  flex: 1;
+  /* prend moitié de l’espace */
+  min-width: 250px;
+}
+
+.contact-gauche h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.contact-gauche p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.formulaire {
+  display: flex;
+  flex-direction: column;
+
+}
+
+#reservation {
+  flex: 1;
+  /* prend moitié de l’espace */
+  min-width: 250px;
+}
+
+#reservation h2.title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 22px;
+  color: #333;
+}
+
+/* Formulaire */
+#reservation form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#reservation form input,
+#reservation form textarea {
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 100%;
+  resize: none;
+}
+
+#reservation form textarea {
+  height: 120px;
+}
+
+#reservation form button {
+  padding: 12px;
+  font-size: 16px;
+  background-color: rgb(238, 178, 178);
+  color: black;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#reservation form button:hover {
+  background-color: #a594d4;
+}
+
+.formulaire {
+  padding: 20px;
+}
+
+.renseignement {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.contact-gauche,
+#reservation {
+  flex: 1;
+}
+
+#reservation form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#reservation input,
+#reservation textarea,
+#reservation button {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+#notification {
+  background-color: #4CAF50;
+  /* Vert */
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+
 footer {
-  background: #bebcbc63;
+  background: rgb(242, 242, 237);
   color: black;
   text-align: center;
   padding: 30px 10%;
   margin-top: auto;
-  /* pousse le footer en bas si la page est courte */
+
   font-family: Arial, sans-serif;
 }
 
@@ -235,7 +419,8 @@ footer .contact a img:hover {
 }
 
 .footer-text span {
-  color: rgb(219, 96, 209);
+  color: rgb(238, 178, 178);
+  font-size: small;
 }
 
 /* Responsive */
@@ -260,7 +445,7 @@ footer .contact a img:hover {
 
   .toggle_menu {
     display: flex;
-    margin-right: 40px;
+    /* margin-right: 40px; */
     height: 40px;
     width: 40px;
     display: flex;
@@ -303,9 +488,12 @@ footer .contact a img:hover {
     box-shadow: 0 0 0 green;
   }
 
+
   header .nav-bar.responsive {
     display: flex;
     position: absolute;
+    padding-left: 2px;
+    padding-right: 2px;
     top: 50px;
     right: 0;
     width: 100%;
@@ -315,11 +503,16 @@ footer .contact a img:hover {
     background-color: white;
     box-shadow: 0 0 10px black;
     flex-direction: row;
+    gap: 5px;
 
   }
 
-  header .nav-bar.responsive li {
-    margin: 15px 10px;
+  header .nav-bar.responsive .cercles {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding-left: 0;
+
   }
 
 
